@@ -25,7 +25,7 @@ from telegram.ext import CommandHandler
 start_handler = CommandHandler('admin_login_operation', start)
 dispatcher.add_handler(start_handler)
 updater.start_polling()
-#ddd
+#ddddddd
 
 def unknown(update, context): #добавлять последним!
     context.bot.send_message(chat_id=update.effective_chat.id, text="Извините, эта команда мне ещё неизвестна")
