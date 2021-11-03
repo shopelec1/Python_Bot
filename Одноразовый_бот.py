@@ -20,6 +20,13 @@ dispatcher.add_handler(echo_handler)
 
 
 
+def admin_entry(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!")
+from telegram.ext import CommandHandler
+start_handler = CommandHandler('admin_enter_shop', start)
+dispatcher.add_handler(start_handler)
+updater.start_polling()
+
 
 
 def unknown(update, context): #добавлять последним!
