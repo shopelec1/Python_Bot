@@ -13,10 +13,35 @@ from telegram.ext import CommandHandler
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
 updater.start_polling()
+################
+
+def in_stock(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Товары в наличии:")
+from telegram.ext import CommandHandler
+stock_handler = CommandHandler('stock', in_stock)
+dispatcher.add_handler(stock_handler)
+updater.start_polling()
 
 
+################
 
+def additional(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Предложите свои товары: можно прислать название модели, ссылку на модель в интернет-магазинах. Буду рад указанию конкретных вкусов")
+from telegram.ext import CommandHandler
+new_handler = CommandHandler('ordernew', additional)
+dispatcher.add_handler(new_handler)
+updater.start_polling()
 
+################
+
+def schedule(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Расписание на сегодня:")
+from telegram.ext import CommandHandler
+schedule_handler = CommandHandler('worktime', schedule)
+dispatcher.add_handler(schedule_handler)
+updater.start_polling()
+
+################
 def admin_entry(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Введите данные. Сначала L, потом P")
 from telegram.ext import CommandHandler
