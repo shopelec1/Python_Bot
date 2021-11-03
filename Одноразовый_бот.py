@@ -23,10 +23,10 @@ from telegram.ext import CommandHandler
 admin_handler = CommandHandler('admin_enter_shop', admin_entry)
 dispatcher.add_handler(admin_handler)
 updater.start_polling()
-admin_login = Alibaba ###
-admin_password = Work ###
+admin_login = 'Alibaba' ###
+admin_password = 'Work' ###
 
-#from telegram.ext import MessageHandler, Filters
+from telegram.ext import MessageHandler, Filters
 #def login(update, context):
 
 #echo_handler = MessageHandler(Filters.text & (~Filters.command), login)
