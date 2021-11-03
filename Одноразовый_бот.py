@@ -23,7 +23,7 @@ dispatcher.add_handler(echo_handler)
 def admin_entry(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Введите данные. Сначала L, потом P")
 from telegram.ext import CommandHandler
-admin_handler = CommandHandler('admin_enter_shop', start)
+admin_handler = CommandHandler('admin_enter_shop', admin_entry)
 dispatcher.add_handler(admin_handler)
 updater.start_polling()
 admin_login = Alibaba
