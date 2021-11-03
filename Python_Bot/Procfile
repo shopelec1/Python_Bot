@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+worker: python bot.py
+=======
+worker: python Одноразовый_бот.py
+>>>>>>> 2a65e2a89c12ed3fe6f67a94d8ee1f9a5801a9ff
